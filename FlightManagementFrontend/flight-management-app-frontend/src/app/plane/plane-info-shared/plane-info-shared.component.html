@@ -1,0 +1,25 @@
+<form>
+    <div class="form-row">
+      <div class="form-group col-md-3">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" readonly [(ngModel)]="plane.name" [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="form-group col-md-3">
+        <label for="model">Model</label>
+        <input type="text" class="form-control" id="model" readonly [(ngModel)]="plane.model" [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="form-group col-md-3">
+        <label for="code">Code</label>
+        <input type="text" class="form-control" id="code"  readonly [(ngModel)]="plane.code" [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="form-group col-md-2">
+        <label for="passengers">Number of Passengers</label>
+        <input type="text" class="form-control" id="passengers" readonly [(ngModel)]="plane.numberOfPassengers" [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="col-md-1">
+        <button type="submit" class="btn btn-primary" id="planeInfo" style="margin-top: 30px;" (click)="goToPlaneInfo()">See info</button>
+      </div>
+    </div>
+    
+      
+  </form>

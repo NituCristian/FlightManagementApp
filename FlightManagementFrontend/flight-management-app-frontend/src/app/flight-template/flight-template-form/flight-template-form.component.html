@@ -1,0 +1,79 @@
+<form class="needs-validation" [formGroup]="flightTemplateForm" autocomplete="off">
+    <div class="form-name">
+        <label class="form-label" for="name">Template Name</label>
+
+        <input type="text" class="form-control" id="inputTitle" formControlName="name" placeholder="Enter name">
+        <p class="message" *ngIf="flightTemplateForm.controls.name.touched && flightTemplateForm.controls.name.invalid "
+            [hidden]="flightTemplateForm.controls.name.valid"> Invalid name </p>
+    </div>
+
+    <div class="form-arrival-time">
+        <label class="form-label" for="inputArrivalTime">Arrival Time</label>
+
+        <input type="time" class="form-control" id="inputArrivalTime" formControlName="arrival_time"
+            placeholder="Enter arrival time">
+        <p class="message"
+            *ngIf="flightTemplateForm.controls.arrival_time.touched && flightTemplateForm.controls.arrival_time.invalid "
+            [hidden]="flightTemplateForm.controls.arrival_time.valid"> Invalid arrival time</p>
+    </div>
+
+    <div class="form-departure-time">
+        <label class="form-label" for="inputDepartureTime">Departure Time</label>
+
+        <input type="time" class="form-control" id="inputDepartureTime" formControlName="departure_time"
+            placeholder="Enter departure time">
+        <p class="message"
+            *ngIf="flightTemplateForm.controls.departure_time.touched && flightTemplateForm.controls.departure_time.invalid "
+            [hidden]="flightTemplateForm.controls.departure_time.valid"> Invalid departure time</p>
+    </div>
+
+    <div class="form-arrival-airport">
+        <label class="form-label" for="inputArrivalAirport">Arrival Airport</label>
+
+        <select class="form-control" formControlName="arrival_airport">
+            <option value="" disabled>Choose the arrival airport</option>
+            <option *ngFor="let airport of airports" [ngValue]="airport"
+                [selected]="isArrivalAirportSelected(airport.airportCode)">{{airport.airportCode}}</option>
+        </select>
+        <p class="message"
+            *ngIf="flightTemplateForm.controls.arrival_airport.touched && flightTemplateForm.controls.arrival_airport.invalid "
+            [hidden]="flightTemplateForm.controls.arrival_airport.valid"> Invalid arrival airport</p>
+    </div>
+
+    <div class="form-departure-airport">
+        <label class="form-label" for="inputDepartureAirport">Departure airport</label>
+
+        <select class="form-control" formControlName="departure_airport">
+            <option value="" disabled>Choose the departure airport</option>
+            <option *ngFor="let airport of airports" [ngValue]="airport"
+                [selected]="isDepartureAirportSelected(airport.airportCode)">{{airport.airportCode}}</option>
+        </select>
+        <p class="message"
+            *ngIf="flightTemplateForm.controls.departure_airport.touched && flightTemplateForm.controls.departure_airport.invalid "
+            [hidden]="flightTemplateForm.controls.departure_airport.valid"> Invalid departure airport</p>
+    </div>
+
+    <div class="form-plane">
+        <label class="form-label" for="name">Plane</label>
+
+        <select class="form-control" formControlName="plane">
+            <option value="" disabled>Choose the operating plane</option>
+            <option *ngFor="let plane of planes" [ngValue]="plane" [selected]="isPlaneSelected(plane.code)">
+                {{plane.code}}</option>
+        </select>
+        <p class="message"
+            *ngIf="flightTemplateForm.controls.plane.touched && flightTemplateForm.controls.plane.invalid "
+            [hidden]="flightTemplateForm.controls.plane.valid"> Invalid plane </p>
+    </div>
+
+    <div class="row">
+        <div class="col-ms-10">
+            <button type="button" class="btn btn-primary" style="margin-top: 1vh; margin-bottom: 1vh;"
+                (click)="onCancel()">Cancel</button>
+            <button type="button" class="btn btn-primary" style="margin-top: 1vh; margin-bottom: 1vh;"
+                (click)="onSubmit()">Submit</button>
+        </div>
+    </div>
+    <notifier-container></notifier-container>
+
+</form>

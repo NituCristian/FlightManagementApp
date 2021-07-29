@@ -1,0 +1,16 @@
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <form class="box">
+                    <h1>Login</h1>
+                    <p class="text-muted"> Please enter your username and password!</p> 
+                    <input type="text" [(ngModel)]="username" placeholder="Username" [ngModelOptions]="{standalone: true}">
+                     <input type="password" [(ngModel)]="password" placeholder="Password" [ngModelOptions]="{standalone: true}"> <input type="submit" (click)="login()" name="" value="Login" href="#">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>

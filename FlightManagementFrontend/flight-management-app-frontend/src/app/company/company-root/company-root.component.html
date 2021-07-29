@@ -1,0 +1,17 @@
+
+<app-navbar></app-navbar>
+<div class="content">
+
+    <div class="row">
+        <div class="col-ms-10">
+            <button type="button" class="btn btn-primary" style="margin-top: 5vh;" (click)="goToCreateCompanyPage()"[hidden]="!createCompanyButtonIsVisible()">Create new Company</button>
+
+        </div>
+    </div>
+
+</div>
+<router-outlet></router-outlet>
+<notifier-container></notifier-container>
+
+
+

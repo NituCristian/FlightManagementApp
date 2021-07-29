@@ -1,0 +1,8 @@
+<app-navbar></app-navbar>
+<div class="content">
+
+    <button type="button" class="btn btn-primary" style="margin-top: 5vh;" (click)="goToCreatePage()" [hidden]="!isOnCreatePage()" [hidden]= "!isAllowedToCreatePlane()">Create new Plane</button>
+
+</div>
+<router-outlet></router-outlet>
+<notifier-container></notifier-container>

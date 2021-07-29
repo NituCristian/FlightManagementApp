@@ -1,0 +1,11 @@
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+.classpath
+.project
+.settings/
+target/**
+/src/main/resources/**
+
+
+/target/

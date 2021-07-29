@@ -1,0 +1,72 @@
+.message {
+    margin-right: 80px;
+  
+    float: right;
+  
+    color: red;
+    font-size: 10px;
+  }
+  
+  .ng-invalid.ng-touched {
+    border-color: red;
+  }
+  
+  .main-div {
+    min-height: 1200px;
+    padding-bottom: 50px;
+    padding-top: 140px;    
+  }
+
+.needs-validation {
+    width: 550px;
+    margin: auto;
+    margin-bottom: 50px;
+    padding: 20px;
+  
+    border-radius: 25px;
+}
+
+.title {
+    margin-bottom: 14px;
+  
+    font-size: 30px;
+  
+    font-weight: bold;
+    text-align: center;
+  }
+
+.form-label {
+    margin-top: 15pt;
+    margin-left: 68pt;
+  
+    font: bold 14px "Roboto", sans-serif;
+  }
+  
+  .form-control {
+    width: 70%;
+    margin: auto;
+  
+    border-radius: 100px;
+    border: 1px solid #786770;
+  }
+
+  .Btn {
+    width: 100px;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+
+  .Btn button {
+    width: 100px;
+    padding: 10pt;
+  
+    border-radius: 5px;
+    border: none;
+  
+    background-color: #008bdb;
+  
+    font-size: 16px;
+    color: white;
+  }
+  

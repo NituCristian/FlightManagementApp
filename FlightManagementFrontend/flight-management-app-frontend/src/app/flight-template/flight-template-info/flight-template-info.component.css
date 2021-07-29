@@ -1,0 +1,22 @@
+.Btn {
+  width: 100px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.Btn button {
+  width: 100px;
+  padding: 10pt;
+  border-radius: 5px;
+  border: none;
+  background-color: #008bdb;
+  font-size: 16px;
+  color: white;
+}
+
+.title {
+  margin-bottom: 14px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}

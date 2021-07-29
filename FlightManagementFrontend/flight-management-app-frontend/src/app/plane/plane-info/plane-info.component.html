@@ -1,0 +1,48 @@
+<div class="content">
+
+    <div class="row">
+      <div class="col-ms-10">
+
+          <button type="button" class="btn btn-primary" style="margin-top: 1vh; margin-bottom: 1vh;" (click)="clearForm()"[hidden]="!meantForCreate">Clear form</button>
+          <button type="button" class="btn btn-primary" style="margin-top: 1vh; margin-bottom: 1vh;" (click)="close()">Close</button>
+
+      </div>
+  </div>
+  
+  
+  <form [formGroup]="planeInfoForm" *ngIf="planeInfoForm">
+   
+      <div class="form-group">
+        <label for="inputName">Name</label>
+        <input type="text" class="form-control" id="inputName" formControlName="name" [readonly]= "!isAllowedToEditOrInsert()" >
+        <p class="message" *ngIf="planeInfoForm.controls.name.touched && planeInfoForm.controls.name.invalid "
+        [hidden]="planeInfoForm.controls.name.valid"> This field is required</p>
+      </div>
+      <div class="form-group">
+        <label for="inputAddress">Model</label>
+        <input type="text" class="form-control" id="inputModel"  formControlName="model"  [readonly]= "!isAllowedToEditOrInsert()">
+        <p class="message" *ngIf="planeInfoForm.controls.model.touched && planeInfoForm.controls.model.invalid "
+        [hidden]="planeInfoForm.controls.model.valid"> This field is required </p>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-8">
+          <label for="inputCode">Code</label>
+          <input type="text" class="form-control" id="inputCode"  formControlName="code"  [readonly]= "!isAllowedToEditOrInsert()" >
+          <p class="message" *ngIf="planeInfoForm.controls.code.touched && planeInfoForm.controls.code.invalid "
+        [hidden]="planeInfoForm.controls.code.valid"> This field is required </p>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputNumberOfPassengers">Number of passengers</label>
+              <input type="text" class="form-control" id="inputNumberOfPassengers"  formControlName="numberOfPassengers"  [readonly]= "!isAllowedToEditOrInsert()">
+              <p class="message" *ngIf="numberOfPassengersNotInputed()"
+              [hidden]="planeInfoForm.controls.numberOfPassengers.valid"> This field is required </p>
+              <p class="message" *ngIf="numberOfPassengersFormatNotRespected()" > Invalid format. Must be number between 10 and 500 (included)</p>
+        </div>
+       
+      </div>
+      <button type="submit" class="btn btn-success" (click)="save()" [hidden]= "!isAllowedToEditOrInsert()">Save</button>  </form>
+        <br/>
+        <br/>
+        <br/>  
+
+</div>

@@ -1,0 +1,21 @@
+<router-outlet></router-outlet>
+
+<app-navbar></app-navbar>
+
+<notifier-container></notifier-container>
+
+<div *ngIf="view == 1">
+    <app-airport-list (view) = 'toList($event)'></app-airport-list>
+</div>
+
+<div *ngIf="view == 2">
+    <app-airport-create (view) = 'toCreate($event)'></app-airport-create>
+</div>
+
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+td button {
+    margin-top: 0px;
+    margin-right: 1em;
+}
+
+
+.activeUserCompany {
+
+    background-color: rgb(228, 230, 213) !important;
+
+}
+
+.activeUserCompany #deleteButton {
+    visibility: hidden;
+}
